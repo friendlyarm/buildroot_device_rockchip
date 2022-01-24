@@ -10,7 +10,7 @@ TARGET_OSNAME=buildroot
 
 TARGET_BUILDROOT_CONFIG=friendlyelec_rk3328_defconfig
 BUILDROOT_SRC=buildroot
-BUILDROOT_FILES+=(device/friendlyelec/rk3328/common-files)
+BUILDROOT_FILES+=(device/friendlyelec/common-files)
 BUILDROOT_FILES+=(device/friendlyelec/rk3328/default-settings)
 BUILDROOT_FILES+=(device/friendlyelec/rk3328/sd-update-tool)
 
