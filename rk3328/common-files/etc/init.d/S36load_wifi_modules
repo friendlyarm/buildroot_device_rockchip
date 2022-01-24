@@ -3,7 +3,7 @@
 case "$1" in
 	start)
 
-		echo 1 > /sys/class/rfkill/rfkill1/state
+		[ -f /sys/class/rfkill/rfkill1/state ] && echo 1 > /sys/class/rfkill/rfkill1/state
 
 		if [ ! -d "/userdata/" ];then
 			echo "userdata is not mounted!!!"
@@ -25,10 +25,12 @@ case "$1" in
 			sync
 		fi
 
+		# insmod /system/lib/modules/"bcmdhd.ko"
+
 		;;
 	stop)
 
-		echo 0 > /sys/class/rfkill/rfkill0/state
+		[ -f /sys/class/rfkill/rfkill1/state ] && echo 0 > /sys/class/rfkill/rfkill0/state
 
 		;;
 	restart|reload)
