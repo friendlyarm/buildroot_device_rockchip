@@ -1,4 +1,18 @@
 #!/bin/sh
+
+#{{ added by FriendlyELEC
+. /etc/fa-boardinfo.sh
+case ${BOARD} in
+nanopi-r*)
+    echo "$0: skiped."
+    exit 1
+    ;;
+*)
+    printf " "
+    ;;
+esac
+#}}
+
 case "$1" in
   start)
     if [ -f /sys/class/rfkill/rfkill0/state ]; then
