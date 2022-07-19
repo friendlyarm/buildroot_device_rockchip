@@ -10,9 +10,14 @@ TARGET_OSNAME=buildroot
 
 TARGET_BUILDROOT_CONFIG=friendlyelec_rk3328_defconfig
 BUILDROOT_SRC=buildroot
-BUILDROOT_FILES+=(device/friendlyelec/common-files)
-BUILDROOT_FILES+=(device/friendlyelec/rk3328/default-settings)
-BUILDROOT_FILES+=(device/friendlyelec/rk3328/sd-update-tool)
+BUILDROOT_FILES+=(device/friendlyelec/overwrite-rk-files)
+BUILDROOT_FILES+=(device/friendlyelec/keep-the-net-classic-naming)
+BUILDROOT_FILES+=(device/friendlyelec/network-interfaces)
+BUILDROOT_FILES+=(device/friendlyelec/fancontrol)
+BUILDROOT_FILES+=(device/friendlyelec/rom-version)
+BUILDROOT_FILES+=(device/friendlyelec/disable-unnecessary-services)
+BUILDROOT_FILES+=(device/friendlyelec/rk3328/disable-gui)
+BUILDROOT_FILES+=(device/friendlyelec/load-modules-service)
 
 # U-boot
 # 

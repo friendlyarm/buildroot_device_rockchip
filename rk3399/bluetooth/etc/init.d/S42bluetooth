@@ -1,0 +1,35 @@
+#!/bin/sh
+
+#{{ added by FriendlyELEC
+. /etc/fa-boardinfo.sh
+case ${BOARD} in
+nanopi-r*)
+    echo "$0: skiped."
+    exit 1
+    ;;
+*)
+    printf " "
+    ;;
+esac
+#}}
+
+case "$1" in
+  start)
+    if [ -f /sys/class/rfkill/rfkill0/state ]; then
+	    /bin/echo 1 > /sys/class/rfkill/rfkill0/state
+	    /usr/bin/hciattach /dev/ttyS0 bcm43xx 115200
+	    sleep 1
+	    /bin/echo 1 > /sys/class/rfkill/rfkill4/state
+	    sleep 1
+	    hciconfig hci0 up
+    fi
+	;;
+  stop)
+		printf " "
+        ;;
+  *)
+        echo "Usage: $0 {start|stop}"
+        exit 1
+        ;;
+esac
+exit 0
