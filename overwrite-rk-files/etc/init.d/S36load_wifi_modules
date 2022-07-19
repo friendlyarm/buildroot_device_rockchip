@@ -30,7 +30,7 @@ case "$1" in
 		;;
 	stop)
 
-		[ -f /sys/class/rfkill/rfkill1/state ] && echo 0 > /sys/class/rfkill/rfkill0/state
+		[ -f /sys/class/rfkill/rfkill0/state ] && echo 0 > /sys/class/rfkill/rfkill0/state
 
 		;;
 	restart|reload)
