@@ -18,6 +18,7 @@ BUILDROOT_FILES+=(device/friendlyelec/rom-version)
 BUILDROOT_FILES+=(device/friendlyelec/disable-unnecessary-services)
 BUILDROOT_FILES+=(device/friendlyelec/load-modules-service)
 BUILDROOT_FILES+=(device/friendlyelec/rk3399/r8169)
+BUILDROOT_FILES+=(device/friendlyelec/rk3399/wifi_module)
 
 # U-boot
 # 
