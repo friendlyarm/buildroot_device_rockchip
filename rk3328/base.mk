@@ -27,7 +27,7 @@ TARGET_UBOOT_CONFIG=nanopi_r2_defconfig
 # Kernel
 # 
 
-TARGET_KERNEL_CONFIG=nanopi-r2_linux_defconfig
+TARGET_KERNEL_CONFIG=nanopi4_linux_defconfig
 TARGET_KERNEL_DTB=resource.img
 
 # Misc
