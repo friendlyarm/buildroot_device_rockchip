@@ -8,6 +8,6 @@ services+=("50launcher")
     cd etc/init.d
     for (( i=0; i<${#services[@]}; i++ ));
     do
-        [ -d S${services[$i]} ] && mv S${services[$i]} K${services[$i]}
+        [ -f S${services[$i]} ] && mv S${services[$i]} K${services[$i]}
     done
 })
