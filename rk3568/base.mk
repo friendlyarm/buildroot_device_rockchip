@@ -13,6 +13,7 @@ BUILDROOT_SRC=buildroot
 BUILDROOT_FILES+=(device/friendlyelec/overwrite-rk-files)
 BUILDROOT_FILES+=(device/friendlyelec/keep-the-net-classic-naming)
 BUILDROOT_FILES+=(device/friendlyelec/network-interfaces)
+BUILDROOT_FILES+=(device/friendlyelec/network-leds)
 BUILDROOT_FILES+=(device/friendlyelec/fancontrol)
 BUILDROOT_FILES+=(device/friendlyelec/rom-version)
 BUILDROOT_FILES+=(device/friendlyelec/disable-unnecessary-services)
